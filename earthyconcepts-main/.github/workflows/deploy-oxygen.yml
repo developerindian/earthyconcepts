@@ -39,13 +39,14 @@ jobs:
 
       - name: Deploy to Oxygen
         run: |
-          # For custom storefronts on Oxygen, you may need to:
-          # 1. Use oxygen deploy if available
-          # 2. Or manually upload the dist folder
-          # 3. Or use a different deployment method
-          echo "Built application ready for Oxygen deployment"
-          echo "Dist folder contents:"
-          ls -la dist/
+          cd earthyconcepts-main
+          # For custom storefronts, you can use Oxygen's deployment commands
+          # Option 1: If you have Oxygen CLI configured
+          npx @shopify/oxygen-cli deploy --shop ${{ secrets.SHOPIFY_STORE_DOMAIN }} --token ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
+
+          # Option 2: Alternative deployment methods
+          # You might need to upload the dist folder to your Oxygen environment
+          # or use other deployment strategies based on your Oxygen setup
         env:
           SHOPIFY_STORE_DOMAIN: ${{ secrets.SHOPIFY_STORE_DOMAIN }}
           SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
