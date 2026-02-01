@@ -8,6 +8,7 @@ import { TestimonialCarousel } from '@/components/TestimonialCarousel';
 import { VideoHeroBanner } from '@/components/VideoHeroBanner';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { NatureWatermark } from '@/components/NatureWatermark';
+import { ShopifyProductGrid } from '@/components/ShopifyProductGrid';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -47,7 +48,10 @@ const Index = () => {
       {/* 2. VIDEO BANNER - Emotional Connection (trust strip removed from homepage) */}
       <VideoHeroBanner />
 
-      {/* 3. LIFESTYLE GALLERY - Visual Brand Immersion */}
+      {/* 3. SHOPIFY PRODUCT GRID - Dynamic Product Display */}
+      <ShopifyProductGrid />
+
+      {/* 4. LIFESTYLE GALLERY - Visual Brand Immersion */}
       <LifestyleGallery />
 
       {/* 4. BESTSELLERS - Products with CTA */}
